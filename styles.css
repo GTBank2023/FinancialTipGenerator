@@ -2,7 +2,7 @@
 body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove padding so the background fills the screen */
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh; /* Ensure the background covers the full viewport height */
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -10,25 +10,33 @@ body {
     background-size: cover; /* Ensures the image covers the entire screen */
     background-repeat: no-repeat;
     background-position: center; /* Keeps the image centered */
-    background-attachment: fixed; /* Optional: keeps background fixed on scroll */
+    /* background-attachment: fixed; Uncomment if you want a fixed background */
 }
 
-/* Modal Button Styling (with your snippet included) */
-#open-modal-btn {
-    position: absolute; /* Allows manual repositioning */
-    top: 500px;   /* Adjust vertical position as needed */
-    left: 460px;  /* Adjust horizontal position as needed */
+/* General Button Styling */
+button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #dc4405; /* Change to your desired color */
-    color: white; /* Text color */
-    border: none; /* Remove default button border */
-    border-radius: 5px;
 }
 
+/* Positionable Modal Button */
+#open-modal-btn {
+    position: absolute; /* Allows you to manually reposition the button */
+    top: 200px;   /* Adjust vertical position as needed */
+    left: 360px;  /* Adjust horizontal position as needed */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc4405;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Button Hover State */
 #open-modal-btn:hover {
-    background-color: #808080; /* Change to your desired hover color */
+    background-color: #808080;
 }
 
 /* Modal Overlay Styling */
@@ -89,6 +97,7 @@ body {
     border-radius: 5px;
 }
 
+/* CTA Hover State */
 #cta a:hover {
     background-color: #808080;
 }
