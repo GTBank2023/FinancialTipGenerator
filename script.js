@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeModalBtn = document.getElementsByClassName("close-btn")[0];
     const tipContent = document.getElementById("tip-content");
     const ctaContent = document.getElementById("cta");
+    const whatsappCTA = document.getElementById("whatsapp-cta");
 
     function getRandomCategory() {
         const categories = Object.keys(tips);
@@ -59,6 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const tip = getRandomTipFromCategory(category);
         tipContent.innerHTML = `<img src="${tip.imageUrl}" class="tip-image" alt="Financial Tip">`;
         ctaContent.innerHTML = `<a href="${tip.link}" target="_blank">${tip.cta}</a>`;
+
+        // WhatsApp Broadcast Channel Button (updated)
+        const whatsappLink = "https://whatsapp.com/channel/your-invite-code"; // Replace with your actual channel invite link
+        whatsappCTA.innerHTML = `<a href="${whatsappLink}" target="_blank">📲 Join Our WhatsApp Channel</a>`;
     }
 
     openModalBtn.addEventListener("click", () => {
